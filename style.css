@@ -1,0 +1,251 @@
+/*
+  Theme Name: 	Blocksy Scanavini
+  Template:     blocksy
+  Author: Gabriel Castillo
+  Description: Tema personalizado para E-Commerce Perú
+  Version: 1.0.0
+  License URI: https://www.tiendascanavini.pe
+  Copyright: (c) 2024 CreativeThemes.
+*/
+
+
+/*  VARIABLES  */
+:root{
+	--color-primary: #FA4616;
+	--color-primary-light: #FF6941;
+	--color-primary-dark: #CE3007;
+	--color-secondary: #005EB8;
+	--color-dark: #132842;
+	--color-grey: #575756;
+	--color-bg-1: #f9f9f9;
+	--color-bg-2: #f4f4f4;
+	--color-bg-3: #e0e0e0;
+	--color-bg-4: #706F6F;
+	--color-white: #fff;
+	--color-black: #000;
+}
+
+/*       HOME    */
+/* carrusel del header */
+#homeHeaderCarousel{
+	margin: 0 auto;
+	padding: 4rem 6rem;
+	max-width: 1440px;
+	height: 80vh;
+	max-height: 640px;
+	min-height: 400px;
+	background-color: var(--color-bg-3);
+	overflow: hidden;
+}
+#homeHeaderCarousel .carousel-inner {
+  height: 100%;
+}
+#homeHeaderCarousel .carousel-item img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center; 
+}
+#homeHeaderCarousel .carousel-control-prev,
+#homeHeaderCarousel .carousel-control-next{
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 45px; 
+  width: 45px;
+  background-color: var(--color-bg-4);
+	border: 1px solid var(--color-bg-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+/* Posicionar prev y next a los lados */
+#homeHeaderCarousel .carousel-control-prev {
+  left: 20px; 
+}
+#homeHeaderCarousel .carousel-control-next {
+  right: 20px;
+}
+/* Cambiar color al hacer hover */
+#homeHeaderCarousel .carousel-control-prev:hover,
+#homeHeaderCarousel .carousel-control-next:hover {
+  background-color: var(--color-black);
+  opacity: 1;
+}
+#homeHeaderCarousel .carousel-indicators [data-bs-target]{
+	text-indent: 0 ;
+}
+/* Indicadores del carrusel */
+#homeHeaderCarousel .carousel-indicators button {
+	margin: 0 15px 15px;
+  width: 150px;
+	height: 1px;
+  background-color: var(--color-bg-4);
+  opacity: 0.7;  
+}
+/* Indicador activo */
+#homeHeaderCarousel .carousel-indicators .active {
+  background-color: var(--color-primary);
+}
+/* Efecto hover */
+#homeHeaderCarousel .carousel-indicators button:hover {
+  background-color: var(--color-primary);
+}
+/* Tooltip */
+.carousel-tooltip {
+	position: absolute;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--color-black);
+}
+
+/*    CATEGORÍAS  DEL HOME  */
+/* Contenedor principal del carrusel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* Pista del carrusel */
+.carousel-container .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* Elementos del carrusel */
+.carousel-container .carousel-item2 {
+  flex: 0 0 auto;
+  width: 250px;
+  margin: 0 15px;
+  text-align: center;;
+}
+
+.carousel-container .carousel-item2 img {
+  width: 100%;
+  border-radius: 8px;
+	background-color: var(--color-bg-2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.carousel-container .carousel-item2 h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+/* Botones de navegación */
+.carousel-container .carousel-btn {
+  position: absolute;
+  top: 50%;
+	z-index: 10;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-black);
+  font-size: 1.5rem;
+  color: var(--color-black);
+  background: var(--color-bg-1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+	opacity: 0; /* Inicialmente ocultos */
+  pointer-events: none; /* Inicialmente deshabilitados */
+}
+/* Botones visibles cuando el contenedor tiene hover */
+.carousel-container:hover .carousel-btn {
+  opacity: 1; /* Mostrar botones en hover */
+  pointer-events: all; /* Habilitar clics en los botones */
+}
+
+.carousel-container .carousel-btn:hover {
+  background: var(--color-bg-3);
+}
+.carousel-container .prev-btn {
+  left: 10px;
+}
+.carousel-container .next-btn {
+  right: 10px;
+}
+/*   FIN   CATEGORÍAS  DEL HOME  */
+
+
+
+
+/* Estilos para pantallas móviles */
+@media (max-width: 576px) {
+	/* ajustar el padding y la altura del carrusel */
+	#homeHeaderCarousel {
+    padding: 2rem 1rem; 
+    height: 60vh; 
+    max-height: none; 
+  }
+
+  /* Ocultar controles en dispositivos móviles */
+  #homeHeaderCarousel .carousel-control-prev,
+  #homeHeaderCarousel .carousel-control-next {
+    display: none;
+  }
+
+  /* Cambiar diseño de los indicadores */
+  #homeHeaderCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+		border-radius: 50%;
+    margin: 0 8px; /* Ajustar separación */
+    background-color: var(--color-grey);
+  }
+
+  #homeHeaderCarousel .carousel-indicators .active {
+    background-color: var(--color-primary);
+  }
+
+  /* Deshabilitar el tooltip del aria-label */
+  #homeHeaderCarousel .carousel-indicators button:hover .carousel-tooltip {
+    display: none;
+  }
+	/* Carrusel Categorías */
+	.carousel-container {
+    padding: 2rem;  /* Reducir el padding */
+  }
+	.carousel-item2 {
+    width: 100%;  /* Una sola categoría por slide */
+    margin: 0 5px;  /* Reducir el espacio entre los elementos */
+  }
+  .carousel-item2 img {
+    width: 80%;  /* Hacer las imágenes más pequeñas */
+    margin: 0 auto;  /* Centrar las imágenes */
+  }
+  .carousel-container .carousel-btn {
+    padding: 0.5rem; /* Hacer los botones más pequeños */
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+	#homeHeaderCarousel {
+    padding: 3rem 2rem; 
+    height: 65vh; 
+    max-height: 450px; 
+  }
+	/* Carrusel Categorías */
+	.carousel-item2 {
+    width: 45%;  /* Mostrar 2 categorías por slide */
+  }
+  .carousel-item2 img {
+    width: 90%;  /* Ajustar el tamaño de las imágenes */
+  }
+  .carousel-container .carousel-btn {
+    padding: 0.6rem;
+    font-size: 1.3rem;
+  }
+}
+
+
