@@ -30,41 +30,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-
-
-  const track = document.querySelector("#categoriesCarousel .carousel-track");
-  const items = document.querySelectorAll(".carousel-item2");
-  const prevBtn = document.querySelector("#categoriesCarousel .prev-btn");
-  const nextBtn = document.querySelector("#categoriesCarousel .next-btn");
-
-  const itemWidth = items[0].offsetWidth + 20; // Ancho de cada elemento + márgenes
-  const visibleItems = Math.floor(track.parentElement.offsetWidth / itemWidth);
-  let currentIndex = 0;
-
-  // Actualizar la posición del carrusel
-  function updateCarousel() {
-    const offset = currentIndex * itemWidth;
-    track.style.transform = `translateX(-${offset}px)`;
-  }
-
-  // Botón de navegación "Previo"
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-
-  // Botón de navegación "Siguiente"
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex < items.length - visibleItems) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  // Redimensionar ventana
-  window.addEventListener("resize", () => {
-    updateCarousel();
-  });
 });

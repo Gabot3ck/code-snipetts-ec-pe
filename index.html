@@ -59,37 +59,66 @@
 
     
     <!-- Categorías -->
-     <section class="d-flex flex-column justify-content-center align-items-center my-5 gap-3" >
+    <section class="d-flex flex-column justify-content-center align-items-center my-5 gap-3" >
       <h2>Categorías</h2>
-      <div id="categoriesCarousel" class="carousel-container">
-        <div class="carousel-track">
-          <div class="carousel-item2">
-            <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/715AA43-AI-1.jpg" alt="Categoría 1">
-            <h3>Categoría 1</h3>
-          </div>
-          <div class="carousel-item2">
-            <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bisagra-73230X30-BS.R.png" alt="Categoría 2">
-            <h3>Categoría 2</h3>
-          </div>
-          <div class="carousel-item2">
-            <img src="https://www.tiendascanavini.pe/wp-content/uploads/2024/12/7112090-CI.N-1.jpg" alt="Categoría 3">
-            <h3>Categoría 3</h3>
-          </div>
-          <div class="carousel-item2">
-            <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/7131094-AI-2.jpg" alt="Categoría 4">
-            <h3>Categoría 4</h3>
-          </div>
-          <div class="carousel-item2">
-            <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/715AC40-NS-1.jpg" alt="Categoría 5">
-            <h3>Categoría 5</h3>
-          </div>
-          <!-- Más categorías según sea necesario -->
+      <div id="categoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <main class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <a href="https://www.tiendascanavini.pe/categoria-producto/cerraduras" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/cerraduras-de-embutir-sobreponer-electricas-de-pomo-sacanavini.png" class="d-block" alt="Cerraduras de embutir, pomo, sobreponer, eléctricas Scanavini">
+                <h3 class="mt-2">Cerraduras</h3>
+              </a>
+              <a href="https://www.tiendascanavini.pe/categoria-producto/cerraduras-digitales/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/cerraduras-digitales-scanavini.png" class="d-block" alt="cerraduras digitales scanavini">
+                <h3 class="mt-2">Cerraduras Digitales</h3>
+              </a>
+              <a href="https://www.tiendascanavini.pe/categoria-producto/bisagras/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bisagras-con-rodamiento-canto-recto-Scanavini.png" class="d-block" alt="bisagras con rodamiento canto recto y canto redondo Scanavini">
+                <h3 class="mt-2">Bisagras</h3>
+              </a>
+              <a href="https://www.tiendascanavini.pe/categoria-producto/candados/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/candados.png" class="d-block" alt="variedad de candados de seguridad, casilleros, bicicletas Scanavini">
+                <h3 class="mt-2">Candados</h3>
+              </a>
+            </div>
+          </main>
+          <!-- Slide 2 -->
+          <main class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <a href="https://www.tiendascanavini.pe/categoria-producto/accesorios-uso-comercial/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/brazos-hidraulicos-salida-de-emergencia-scanavini.png" class="d-block" alt="salidas de emergencia y brazos hidráulicos scanavini">
+                <h3 class="mt-2">Accesorios Uso Comercial</h3>
+              </a>
+              <a href="https://www.tiendascanavini.pe/categoria-producto/tiradores/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/tiradores-para-puertas-y-muebles-scanavini.png" class="d-block" alt="tiradores para puertas y muebles scanavini">
+                <h3 class="mt-2">Tiradores</h3>
+              </a>
+              <a href="https://www.tiendascanavini.pe/categoria-producto/complementos/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/espanoletas-y-topes-para-puertas-scanavini.png" class="d-block" alt="topes para puertas y españoletas para ventanas">
+                <h3 class="mt-2">Complementos</h3>
+              </a>
+              <a href="https://www.tiendascanavini.pe/categoria-producto/servicios/" class="text-center mx-3">
+                <img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/7112002-CI.N-2.jpg" class="d-block" alt="servicios de instalación cerraduras digitales sacanvini">
+                <h3 class="mt-2">Servicios</h3>
+              </a>
+            </div>
+          </main>
         </div>
-        <button class="carousel-btn prev-btn">&lt;</button>
-        <button class="carousel-btn next-btn">&gt;</button>
+      
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#categoriesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
       
-     </section>
+    </section>
     
     
 
