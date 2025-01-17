@@ -47,7 +47,7 @@
   object-position: center; 
 }
 #homeHeaderCarousel .carousel-control-prev,
-#homeHeaderCarousel .carousel-control-next{
+#homeHeaderCarousel .carousel-control-next {
 	position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -102,8 +102,39 @@
 	color: var(--color-black);
 }
 
-/*    CATEGORÍAS  DEL HOME  */
-/* Contenedor principal del carrusel */
+/*?    CATEGORÍAS  DEL HOME  */
+/*? Contenedor principal del carrusel */
+.wrapper-categories-carousel{
+  margin: 0 auto;
+  padding: 4rem 0;
+  width: 90%;
+  max-width: 1200px;
+}
+.wrapper-categories-carousel h2{
+  color: var(--color-black);
+}
+#categoriesCarousel {
+  width: 100%;
+  overflow: hidden;
+}
+#categoriesCarousel .carousel-item {
+  flex-wrap: wrap;
+}
+#categoriesCarousel .carousel-inner {
+  display: flex;
+  align-items: center;
+  overflow: hidden; 
+  max-width: 100%;
+}
+#categoriesCarousel .carousel-item a{
+  border: 1px solid var(--color-white);
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+#categoriesCarousel .carousel-item a:hover{
+  border: 1px solid var(--color-black);
+  text-decoration: underline;
+}
 #categoriesCarousel .carousel-item a img {
   width: 250px;
   height: 200px;
@@ -111,24 +142,48 @@
   background-color: var(--color-bg-3);
   transition: transform 0.3s ease;
 }
-#categoriesCarousel .carousel-item a img:hover {
-  transform: scale(1.05); /* Zoom suave al pasar el mouse */
-}
 #categoriesCarousel .carousel-item a h3 {
+  margin-top: 1rem;
   font-size: 1rem;
   color: var(--color-dark);
-  margin-top: 10px;
   transition: color 0.3s ease;
 }
-#categoriesCarousel .carousel-item a:hover h3 {
-  color: var(--color-primary); /* Cambia el color del título al hacer hover */
+#categoriesCarousel:hover .carousel-control-prev,
+#categoriesCarousel:hover .carousel-control-next{
+  position: absolute;
+  top: 50%;
+  border: 1px solid var(--color-bg-1);
+  height: 45px; 
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+  opacity: 0.8;
+  transform: translateY(-50%);
+  transition: background-color 0.3s, opacity 0.3s;
 }
-/*   FIN   CATEGORÍAS  DEL HOME  */
+#categoriesCarousel .carousel-control-prev,
+#categoriesCarousel .carousel-control-next{
+  display: none;
+}
+#categoriesCarousel .carousel-control-prev:hover,
+#categoriesCarousel .carousel-control-next:hover{
+  background-color: var(--color-bg-4);
+  opacity: 1;
+}
+#categoriesCarousel .carousel-control-prev {
+  left: -10px; 
+}
+#categoriesCarousel .carousel-control-next {
+  right: -10px;
+}
+/*?   FIN   CATEGORÍAS  DEL HOME  */
 
 
 
 
-/* Estilos para pantallas móviles */
+/*? Estilos para pantallas móviles */
 @media (max-width: 576px) {
 	/* ajustar el padding y la altura del carrusel */
 	#homeHeaderCarousel {
@@ -159,6 +214,20 @@
   /* Deshabilitar el tooltip del aria-label */
   #homeHeaderCarousel .carousel-indicators button:hover .carousel-tooltip {
     display: none;
+  }
+  /*? carusel categorias del Home */
+  #categoriesCarousel .carousel-item {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #categoriesCarousel .category-item img {
+    width: 200px;
+    height: 150px;
+  }
+
+  #categoriesCarousel .category-item h3 {
+    font-size: 0.9rem;
   }
 }
 
