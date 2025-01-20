@@ -23,28 +23,73 @@
 	--color-bg-4: #706F6F;
 	--color-white: #fff;
 	--color-black: #000;
+  --fsize-1: clamp(0.68rem,  0.36rem   +  0.61vw,  0.81rem);
+  --fsize-2: clamp(0.81rem,  0.42rem   +  0.80vw,  1rem);
+  --fsize-3: clamp(0.87rem,  0.4375rem +  0.80vw,  1.12rem);
+  --fsize-4: clamp(0.93rem,  0.4375rem +  0.85vw,  1.25rem);
+  --fsize-5: clamp(1rem, 0.60rem + 1.35vw, 2.25rem);
+  --fsize-6: clamp(1.18rem, 0.875rem + 1.5vw, 2.55rem);
+  --fsize-7: clamp(1.6rem, 1.8rem + 2.2vw, 3.2rem);
+}
+/* TAMANIOS DE FUENTE */
+/*? * * *  BOTON * * * */
+
+.btn-master{
+  height: 50px;
+  width: 180px;
+  border: 1px solid var(--color-primary);
+  padding: 10px 18px;
+  border-radius: 20px;
+  line-height: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  color: var(--color-bg-2);
+  background: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn-master:hover{
+  color: var(--color-primary);
+  background: var(--color-white);
 }
 
 /*       HOME    */
 /* carrusel del header */
 #homeHeaderCarousel{
 	margin: 0 auto;
-	padding: 4rem 6rem;
 	max-width: 1440px;
 	height: 80vh;
-	max-height: 640px;
+	/* max-height: 640px; */
 	min-height: 400px;
 	background-color: var(--color-bg-3);
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 #homeHeaderCarousel .carousel-inner {
   height: 100%;
 }
-#homeHeaderCarousel .carousel-item img {
-  width: 100%; 
-  height: 100%; 
+#homeHeaderCarousel .carousel-inner .carousel-item {
+  padding: 3.5rem 2rem;
+}
+#homeHeaderCarousel .carousel-inner .carousel-item section{
+  margin-left: 5.5rem;
+}
+#homeHeaderCarousel .carousel-inner .carousel-item h1{
+  margin: 0;
+  font-size: var(--fsize-7);
+  font-weight: 600;
+  color: var(--color-bg-2);
+}
+#homeHeaderCarousel .carousel-inner .carousel-item p{
+  margin: 30px 0;
+  max-width: 360px;
+  font-size: var(--fsize-4);
+}
+#homeHeaderCarousel .carousel-item .container-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover; 
-  object-position: center; 
 }
 #homeHeaderCarousel .carousel-control-prev,
 #homeHeaderCarousel .carousel-control-next {
@@ -82,9 +127,9 @@
 #homeHeaderCarousel .carousel-indicators button {
 	margin: 0 15px 15px;
   width: 150px;
-	height: 1px;
+	height: 2px;
   background-color: var(--color-bg-4);
-  opacity: 0.7;  
+  opacity: 0.7;
 }
 /* Indicador activo */
 #homeHeaderCarousel .carousel-indicators .active {
@@ -100,6 +145,9 @@
 	font-size: 1rem;
 	font-weight: 600;
 	color: var(--color-black);
+}
+#carousel-item-1{
+  background-image: url('https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bg-carrusel-header-1.jpg');
 }
 
 /*?    CATEGORÍAS  DEL HOME  */
@@ -404,11 +452,27 @@
 
 /*? Estilos para pantallas móviles */
 @media (max-width: 576px) {
-	/* ajustar el padding y la altura del carrusel */
-	#homeHeaderCarousel {
-    padding: 2rem 1rem; 
-    height: 60vh; 
-    max-height: none; 
+  .btn-master{
+    margin: 0 auto;
+    padding: 8px 12px;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+  }
+  #homeHeaderCarousel .carousel-inner .carousel-item {
+    justify-content: space-evenly !important;
+    gap: 2.5rem;
+    padding: 1rem 1.2rem;
+  }
+  #homeHeaderCarousel .carousel-inner .carousel-item section{
+    margin-left: 0;
+  }
+  #homeHeaderCarousel .carousel-inner .carousel-item a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
   }
 
   /* Ocultar controles en dispositivos móviles */
@@ -439,22 +503,40 @@
     flex-direction: row;
     justify-content: center;
   }
-
   #categoriesCarousel .category-item img {
     width: 200px;
     height: 150px;
   }
-
   #categoriesCarousel .category-item h3 {
     font-size: 0.9rem;
   }
 }
 
 @media (min-width: 577px) and (max-width: 992px) {
-	#homeHeaderCarousel {
-    padding: 3rem 2rem; 
-    height: 65vh; 
-    max-height: 450px; 
+  .btn-master{
+    margin: 0 auto;
+    padding: 8px 12px;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+  }
+  #homeHeaderCarousel .carousel-inner .carousel-item section{
+    margin-left: 0;
+  }
+  #homeHeaderCarousel .carousel-inner .carousel-item p{
+    max-width: 100%;
+    font-size: 16px;
+  }
+  #homeHeaderCarousel .carousel-inner .carousel-item a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  #homeHeaderCarousel .carousel-item .container-img img{
+    margin-top: 30px;
+    height: 80%;
   }
 }
 
