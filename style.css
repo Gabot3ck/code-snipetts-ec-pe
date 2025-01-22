@@ -7,7 +7,10 @@
   License URI: https://www.tiendascanavini.pe
   Copyright: (c) 2024 CreativeThemes.
 */
-
+/*
+  BREAKPOINTS
+    375px- 425px- 576px - 640px - 768px - 992px - 1024px - 1200px
+*/
 
 /*  VARIABLES  */
 :root{
@@ -53,6 +56,28 @@
 .btn-master:hover{
   color: var(--color-primary);
   background: var(--color-white);
+}
+.btn-grid-products{
+  margin: 0 auto;
+  height: 40px;
+  width: 150px;
+  border: 1px solid var(--color-secondary);
+  padding: 8px 10px;
+  border-radius: 20px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  color: var(--color-bg-1);
+  background: var(--color-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn-grid-products:hover{
+  color: var(--color-secondary);
+  background: var(--color-white);
+
 }
 
 /*       HOME    */
@@ -466,13 +491,22 @@
   padding: 0 0 15px 0;
   width: 100%;
   height: 250px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.item-first .item-first-child{
+  position: relative;
+}
+.link-grid__featured-products{
   color: var(--color-dark);
   text-decoration: none;
-  cursor: pointer;
 }
 .wrapper-text__item-first  h4{
   font-weight: 600;
   font-size: calc(1.050rem + .25vw);
+}
+.item-first .link-btn__featured-products{
+  opacity: 0;
 }
 .grid-featured-products .item-first .item-first-child {
   padding: .5rem .6rem ;
@@ -506,6 +540,9 @@
   grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
+.grid-featured-products .item-last .item-last-child{
+  overflow: hidden;
+}
 .grid-featured-products  .item-last > a{
   border-radius: 24px;
   padding-bottom: 15px;
@@ -536,6 +573,10 @@
   text-align: center;
   font-size: .9rem;
 }
+.wrapper-text__item-last .link-btn__featured-products{
+  display: none;
+}
+
 @media (min-width: 425px) {
   .wrapper-text__item-first  h4{
     max-width: 200px;
@@ -575,7 +616,7 @@
   }
   .wrapper-img__item-last img{
     height: 100%;
-    max-height: 150px;
+    max-height: 130px;
     margin-bottom: 0px;
   }
 }
@@ -614,13 +655,16 @@
   .item-first .item-first-child .wrapper-text__item-first{
     width: 100%;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .wrapper-img__item-first img {
     margin-left: 4rem;
     max-height: 330px;
   }
   .wrapper-img__item-first{
-    height: 80%;
+    height: 60%;
     max-width: 100%;
   }
   .wrapper-text__item-first  h4, 
@@ -631,6 +675,11 @@
   .text__featured-products{
     width: 300px;
     max-width: 100%;
+    opacity: 1;
+    transform: translateY(60px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    pointer-events: none;
   }
   .grid-featured-products .item-last{
     padding: 0 0 0 10px;
@@ -642,6 +691,42 @@
   .wrapper-text__item-last h4{
     max-width: 130px;
   }
+  .item-first-child:hover .text__featured-products{
+    opacity: 0;
+    transform: translateY(25px);
+    pointer-events: auto;
+  }
+  .item-first-child .link-btn__featured-products{
+    transform: translateY(120px);
+    transition: opacity 0.2s ease, transform 0.3s ease;
+    position: absolute;
+  }
+  .item-first-child:hover .link-btn__featured-products{
+    opacity: 1;
+    transform: translateY(65px);
+    transition: opacity 0.2s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .wrapper-text__item-last{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .wrapper-text__item-last .link-btn__featured-products{
+    display: block;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .item-last-child:hover .link-btn__featured-products{
+    margin-top: 5px;
+    opacity: 1; 
+    visibility: visible;
+    animation: fadeInUp .4s ease-in-out;
+  }
+  .item-last-child:not(:hover) .link-btn__featured-products{
+    animation: fadeOutDown .4s ease-in-out;
+  }
 }
 @media (min-width: 992px) {
   .wrapper-text__item-first  h4{
@@ -652,19 +737,28 @@
   .wrapper-img__item-last{
     height: 60%;
   }
+  .wrapper-img__item-last img {
+    max-height: 140px;
+  }
   .wrapper-text__item-last h4{
     font-size: 1rem;
     font-weight: 600;
   }
+  .text__featured-products{
+    transform: translateY(30px);
+  }
+  .item-first-child:hover .link-btn__featured-products{
+    transform: translateY(50px);
+  }
 }
 @media (min-width: 1024px) {
-  .wrapper-img__item-last img{
+  /* .wrapper-img__item-last img{
     max-height: 190px;
-  }
+  } */
   .wrapper-text__item-last h4{
-    width: 200px;
+    width: 100%;
     max-width: 100%;
-    font-size: 18px;
+    font-size: 17px;
   }
   .grid-featured-products .item-first{
     padding: 0 15px 0 0;
@@ -674,7 +768,11 @@
     gap: 30px;
   }
 }
-
+@media (min-width: 1200px){
+  .wrapper-text__item-last .link-btn__featured-products{
+    transform: scale(1);
+  }
+}
 
 
 
