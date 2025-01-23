@@ -80,16 +80,14 @@
 
 }
 
-/*       HOME    */
-/* carrusel del header */
+/*?       HOME    */
+/*? CARRUSEL DEL HEADER*/
 #homeHeaderCarousel{
 	margin: 0 auto;
 	max-width: 1440px;
 	height: 80vh;
-	/* max-height: 640px; */
 	min-height: 400px;
 	background-color: var(--color-bg-3);
-	/* overflow: hidden; */
 }
 #homeHeaderCarousel .carousel-inner {
   height: 100%;
@@ -174,115 +172,71 @@
 #carousel-item-1{
   background-image: url('https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bg-carrusel-header-1.jpg');
 }
+/*? FIN CARRUSEL DEL HEADER */
+
+
+
+/*? * * *  PILARES DE LA EMPRESA * * * */
+.card-container-pillars{
+  margin: 2rem auto !important;
+  padding: 1rem 0;
+  max-width: 1420px;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: var(--color-bg-3); */
+}
+.card-container-pillars .card{
+  padding: 0;
+  border: none;
+}
+.card-container-pillars .card h5{
+  font-size: var(--fsize-4);
+  font-weight: 700;
+}
+.card-container-pillars img{
+  margin: 0 auto;
+  width: 60px;
+}
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media (min-width: 768px) {
+  .card-container-pillars{
+    margin: 3rem auto !important;
+    padding: 1rem 0;
+  }
+  .card-container-pillars .card{
+    padding: 1rem 0;
+  }
+  .card-container-pillars img{
+    width: 80px;
+  }
+}
+/*? * * *  FIN  PILARES DE LA EMPRESA * * * */  
+
+
 
 /*?    CATEGORÍAS  DEL HOME  */
-/*? Contenedor principal del carrusel */
-.wrapper-categories-carousel{
-  margin: 0 auto;
-  padding: 4rem 0;
-  width: 90%;
-  max-width: 1200px;
-}
-.wrapper-categories-carousel h2{
-  color: var(--color-black);
-}
-#categoriesCarousel {
-  width: 100%;
-  overflow: hidden;
-}
-#categoriesCarousel .carousel-item {
-  flex-wrap: wrap;
-}
-#categoriesCarousel .carousel-inner {
-  display: flex;
-  align-items: center;
-  overflow: hidden; 
-  max-width: 100%;
-}
-#categoriesCarousel .carousel-item a{
-  border: 1px solid var(--color-white);
-  padding-bottom: 10px;
-  text-decoration: none;
-}
-#categoriesCarousel .carousel-item a:hover{
-  border: 1px solid var(--color-black);
-  text-decoration: underline;
-}
-#categoriesCarousel .carousel-item a img {
-  width: 250px;
-  height: 200px;
-  object-fit: cover;
-  background-color: var(--color-bg-3);
-  transition: transform 0.3s ease;
-}
-#categoriesCarousel .carousel-item a h3 {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: var(--color-dark);
-  transition: color 0.3s ease;
-}
-#categoriesCarousel:hover .carousel-control-prev,
-#categoriesCarousel:hover .carousel-control-next{
-  position: absolute;
-  top: 50%;
-  border: 1px solid var(--color-bg-1);
-  height: 45px; 
-  width: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-black);
-  opacity: 0.8;
-  transform: translateY(-50%);
-  transition: background-color 0.3s, opacity 0.3s;
-}
-#categoriesCarousel .carousel-control-prev,
-#categoriesCarousel .carousel-control-next{
-  display: none;
-}
-#categoriesCarousel .carousel-control-prev:hover,
-#categoriesCarousel .carousel-control-next:hover{
-  background-color: var(--color-bg-4);
-  opacity: 1;
-}
-#categoriesCarousel .carousel-control-prev {
-  left: -10px; 
-}
-#categoriesCarousel .carousel-control-next {
-  right: -10px;
-}
-/*?   FIN   CATEGORÍAS  DEL HOME  */
-
-
-
-/*? prueba */
 /* Contenedor principal con un ancho máximo */
 .categories-carousel {
-  padding: 20px;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: var(--color-bg-2);
 }
 
 .recipe-container {
-  background: var(--color-bg-3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 25px;
-  padding: 30px 0;
-  width: min(1200px, 100%);
+  width: min(1400px, 100%);
 }
 
 .recipe-container h2 {
-  font-size: 2rem;
+  margin: 20px 0 40px;
+  font-size: var(--fsize-6);
   font-weight: 600;
   text-align: center;
   color: var(--color-dark);
-  margin: 20px 0 40px;
 }
 
 .swiper {
@@ -306,8 +260,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--clr-text);
-  background: var(--color-bg-2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: var(--color-white);
   border-radius: 10px;
 }
 .post a{
@@ -321,8 +274,6 @@
   overflow: hidden;
   aspect-ratio: 4/3;
   border-radius: 6px;
-  user-select: none;
-  pointer-events: none;
 }
 
 .post-body {
@@ -370,17 +321,11 @@
   scale: 1;
   opacity: 1;
 }
-
 .post-actions-content li {
   padding: 0.5rem 0.65rem;
   border-radius: 0.25rem;
   list-style: none;
 }
-
-.post-actions-content li:is(:hover, :focus-within) {
-  background-color: rgba(248, 132, 169, 0.7);
-}
-
 .post-actions-link {
   width: max-content;
   display: grid;
@@ -391,7 +336,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 .post-actions-controller {
   border: 0;
   background: none;
@@ -434,20 +378,15 @@
   color: var(--color-bg-1);
   transform: scale(.6);
 }
-
-/* MEDIA QUERIES */
-
 @media (max-width: 1200px) { 
   .swiper {
       width: 80%;
     }
 }
-
 @media (max-width: 900px) {
   #recipes {
     padding: 60px 80px;
   }
-
   .swiper {
     width: 50%;
   }
@@ -468,11 +407,10 @@
     width: 80%;
   }
 }
+/*? * * *  FIN CATEGORÍAS HOME * * * * /
 
-/*? prueba */
 
-
-/*? * * *  Productos Destacados * * * */
+/*? * * *  PRODUCTOS DESTACADOS * * * */
 .text__featured-products{
   font-size: calc(.85rem + .20vw);
 }
@@ -806,48 +744,7 @@
     transform: scale(1);
   }
 }
-/*? * * *  Fin Productos Destacados * * * */
-
-
-
-/*? * * *  Pilares de la empresa * * * */
-.card-container-pillars{
-  margin: 1rem auto;
-  padding: 1rem 0;
-  max-width: 1420px;
-  display: flex;
-  justify-content: space-evenly;
-  /* background-color: var(--color-bg-3); */
-}
-.card-container-pillars .card{
-  padding: 0;
-  border: none;
-}
-.card-container-pillars .card h5{
-  font-size: var(--fsize-4);
-  font-weight: 700;
-}
-.card-container-pillars img{
-  margin: 0 auto;
-  width: 60px;
-}
-
-/* Media query para pantallas pequeñas (menos de 768px) */
-@media (min-width: 768px) {
-  .card-container-pillars{
-    margin: 3rem auto;
-    padding: 1rem 0;
-  }
-  .card-container-pillars .card{
-    padding: 1rem 0;
-  }
-  .card-container-pillars img{
-    width: 80px;
-  }
-}
-/*? * * *  Fin  Pilares de la empresa * * * */  
-
-
+/*? * * *  FIN PRODUCTOS DESTACADOS * * * */
 
 
 /*? Estilos para pantallas móviles */
