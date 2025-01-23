@@ -747,6 +747,17 @@
 /*? * * *  FIN PRODUCTOS DESTACADOS * * * */
 
 
+/*? * * *  GRID DE IMAGENES DE CATEGORIAS * * * */
+.category-images-grid{
+  margin: 0 auto;
+  max-width: 1400px;
+  background-color: var(--color-primary);
+}
+.category-images-grid img{
+  
+}
+
+
 /*? Estilos para pantallas móviles */
 @media (max-width: 576px) {
   .btn-master{
