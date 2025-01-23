@@ -29,7 +29,7 @@
   --fsize-1: clamp(0.68rem,  0.36rem   +  0.61vw,  0.81rem);
   --fsize-2: clamp(0.81rem,  0.42rem   +  0.80vw,  1rem);
   --fsize-3: clamp(0.87rem,  0.4375rem +  0.80vw,  1.12rem);
-  --fsize-4: clamp(0.93rem,  0.4375rem +  0.85vw,  1.25rem);
+  --fsize-4: clamp(1.2rem,  0.51rem +  0.85vw,  1.35rem);
   --fsize-5: clamp(1rem, 0.60rem + 1.35vw, 2.25rem);
   --fsize-6: clamp(1.7rem, 1.1rem + 1.7vw, 2.65rem);
   --fsize-7: clamp(1.55rem, 1.8rem + 2.2vw, 3.2rem);
@@ -788,9 +788,6 @@
   }
 }
 @media (min-width: 1024px) {
-  /* .wrapper-img__item-last img{
-    max-height: 190px;
-  } */
   .wrapper-text__item-last h4{
     width: 100%;
     max-width: 100%;
@@ -809,6 +806,47 @@
     transform: scale(1);
   }
 }
+/*? * * *  Fin Productos Destacados * * * */
+
+
+
+/*? * * *  Pilares de la empresa * * * */
+.card-container-pillars{
+  margin: 1rem auto;
+  padding: 1rem 0;
+  max-width: 1420px;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: var(--color-bg-3); */
+}
+.card-container-pillars .card{
+  padding: 0;
+  border: none;
+}
+.card-container-pillars .card h5{
+  font-size: var(--fsize-4);
+  font-weight: 700;
+}
+.card-container-pillars img{
+  margin: 0 auto;
+  width: 60px;
+}
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media (min-width: 768px) {
+  .card-container-pillars{
+    margin: 3rem auto;
+    padding: 1rem 0;
+  }
+  .card-container-pillars .card{
+    padding: 1rem 0;
+  }
+  .card-container-pillars img{
+    width: 80px;
+  }
+}
+/*? * * *  Fin  Pilares de la empresa * * * */  
+
 
 
 
