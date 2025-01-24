@@ -35,7 +35,13 @@
   --fsize-7: clamp(1.55rem, 1.8rem + 2.2vw, 3.2rem);
 }
 
-
+.title-section{
+  margin: 25px 0 15px;
+  font-size: var(--fsize-6);
+  font-weight: 600;
+  color: var(--color-dark);
+  text-align: center;
+}
 
 /*? * * *  BOTONES * * * */
 .btn-master{
