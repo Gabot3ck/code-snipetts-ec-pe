@@ -421,7 +421,7 @@
   max-width: 1400px;
 }
 .container-featured-products h2{
-  margin-bottom: 40px !important;
+  margin-bottom: 15px !important;
   font-size: var(--fsize-6);
   font-weight: 600;
   color: var(--color-dark);
@@ -604,8 +604,10 @@
 }
 @media (min-width: 768px) {
   .container-featured-products{
-    padding: 4rem 0;
     width: 98%;
+  }
+  .container-featured-products h2{
+    margin-bottom: 30px !important;
   }
   .grid-featured-products{
     max-height: 600px;
