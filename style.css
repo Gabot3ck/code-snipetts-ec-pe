@@ -415,8 +415,8 @@
   font-size: calc(.85rem + .20vw);
 }
 .container-featured-products{
-  margin: 0 auto;
-  padding: 4rem 0;
+  margin: 1.5rem auto;
+  padding: 1rem 0;
   width: 90%;
   max-width: 1400px;
 }
@@ -752,7 +752,6 @@
   margin: 0 auto;
   padding: 1rem;
   max-width: 1400px;
-  /* background-color: var(--color-primary); */
 }
 .category-images-grid .card{
   position: relative;
@@ -801,8 +800,11 @@
     font-size: 19px;
   }
 }
+/*? * * *  FIN  GRID DE IMAGENES DE CATEGORIAS * * * */
 
-/*? Estilos para pantallas móviles */
+
+
+/*? * * *  MEDIA QUERIES  * * *  */
 @media (max-width: 576px) {
   .btn-master{
     margin: 0 auto;
@@ -891,5 +893,5 @@
     height: 80%;
   }
 }
-
+/*? * * *  FIN  MEDIA QUERIES  * * *  */
 
