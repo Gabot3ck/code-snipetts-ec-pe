@@ -34,9 +34,10 @@
   --fsize-6: clamp(1.7rem, 1.1rem + 1.7vw, 2.65rem);
   --fsize-7: clamp(1.55rem, 1.8rem + 2.2vw, 3.2rem);
 }
-/* TAMANIOS DE FUENTE */
-/*? * * *  BOTON * * * */
 
+
+
+/*? * * *  BOTONES * * * */
 .btn-master{
   height: 50px;
   width: 180px;
