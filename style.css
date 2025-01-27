@@ -774,7 +774,7 @@
   color: var(--color-bg-2);
   font-size: var(--fsize-2);
   font-weight: 700;
-  
+  text-transform: uppercase;
 }
 /* .category-images-grid .card .category-images-grid__budget::after{
   content: "";
