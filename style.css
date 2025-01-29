@@ -26,6 +26,8 @@
 	--color-bg-4: #706F6F;
 	--color-white: #fff;
 	--color-black: #000;
+  --color-footer-top: #313131;
+  --color-footer-bottom: #1A1A1A;
   --fsize-1: clamp(0.68rem,  0.36rem   +  0.61vw,  0.81rem);
   --fsize-2: clamp(0.81rem,  0.42rem   +  0.80vw,  1rem);
   --fsize-3: clamp(0.87rem,  0.4375rem +  0.80vw,  1.12rem);
@@ -814,9 +816,57 @@
 
 
 /*? * * *   F O O T E R   * * */
+.footer .footer__top{
+  padding: 15px 0 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-bg-2);
+  background-color: var(--color-footer-top);
+}
+.footer .footer__top > div{
+  width: 180px;
+  margin-bottom: 15px;
+}
+.footer .footer__top  h6 {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.footer .footer__top .footer__top__brand{
+  display: flex;
+  justify-content: center;
+}
+.footer .footer__top .footer__top__brand img{
+  width: 110px;
+}
+.footer .footer__top .footer__top__brand h6{
+  display: none;
+  font-size: var(--fsize-2);
+  font-weight: 400 !important;
+  color: var(--color-bg-2);
+}
+.footer .footer__top .footer__top__contact p{
+  margin-bottom: 6px;
+  font-size: var(--fsize-2);
+}
+.footer .footer__top .footer__top__contact .bi-geo-alt-fill + p{
+  max-width: 150px;
+}
+.footer .footer__top .footer__top__marketing a{
+  color: var(--color-bg-2);
+}
+.footer .footer__top .footer__top__marketing a:hover{
+  color: var(--color-bg-3);
+}
+.bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
+  font-size: 12px;
+}
 .footer .footer__bottom{
   width: 100%;
-  background-color: var(--color-black);
+  background-color: var(--color-footer-bottom);
 }
 .footer .footer__bottom .footer__bottom__policies{
   margin: 0 auto;
@@ -845,23 +895,102 @@
   text-align: center;
 }
 @media (min-width: 576px) {
+  .footer .footer__top{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .footer__top .footer__top__marketing h6{
+    text-align: center;
+  }
+  .footer .footer__top .footer__top__brand img{
+    width: 120px;
+  }
   .footer .footer__bottom p{
     padding: 20px 0 16px;
   }
 }
 @media (min-width: 640px) {
+  .footer .footer__top{
+    padding: 1rem 1rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .footer__top .footer__top__brand{
+    flex-direction: column;
+    align-items: start;
+    align-self: self-start;
+  }
+  .footer .footer__top .footer__top__brand img{
+    margin-bottom: 12px;
+    width: 120px;
+  }
+  .footer .footer__top .footer__top__brand h6{
+    display: block;
+  }
+  .footer .footer__top .footer__top__marketing{
+    align-self: self-start;
+  }
+  
   .footer .footer__bottom .footer__bottom__policies{
-    max-width: 480px;
+    max-width: 620px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer__top{
+    padding: 1.5rem 1rem 0;
+    justify-content: space-around;
+  }
+  .footer .footer__top > div {
+    width: 190px;
+  }
+  .footer .footer__top h6 {
+    margin-bottom: 12px;
+  }
+  .footer .footer__top .footer__top__contact .bi-geo-alt-fill + p{
+    max-width: 180px;
+  }
+  .footer .footer__top .footer__top__marketing h6{
+    text-align: start;
   }
 }
 @media (min-width: 1024px) {
+  .footer .footer__top{
+    padding: 1.5rem 2.5rem 0;
+    justify-content: space-between;
+  }
   .footer .footer__bottom .footer__bottom__policies{
     max-width: 800px;
   }
+  .footer .footer__top .footer__top__brand img{
+    width: 140px;
+  }
 }
 @media (min-width: 1200px) {
+  .footer .footer__top{
+    padding: 2rem 1rem 0;
+    justify-content: space-around;
+  }
+  .footer .footer__top h6 {
+    font-size: 17px;
+  }
   .footer .footer__bottom .footer__bottom__policies{
     max-width: 1100px;
+  }
+  .footer .footer__top .footer__top__brand img{
+    width: 160px;
+  }
+  .footer .footer__top .footer__top__brand h6,
+  .footer .footer__top .footer__top__contact p{
+    font-size: 15px;
+  }
+  .footer .footer__top > div {
+    width: 200px;
+}
+  .bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
+    margin-right: 5px;
+    font-size: 16px;
   }
 }
 /*? * * *   F I N   F O O T E R   * * */
