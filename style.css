@@ -834,6 +834,7 @@
 .footer .footer__top  h6 {
   margin-bottom: 8px;
   font-size: 15px;
+  color: var(--color-bg-2);
 }
 .footer .footer__top .footer__top__brand{
   display: flex;
@@ -846,7 +847,6 @@
   display: none;
   font-size: var(--fsize-2);
   font-weight: 400 !important;
-  color: var(--color-bg-2);
 }
 .footer .footer__top .footer__top__contact p{
   margin-bottom: 6px;

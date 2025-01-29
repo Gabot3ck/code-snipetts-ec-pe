@@ -19,7 +19,9 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<!-- importar animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+	<!-- importar icons bootsatrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	
 	<?php wp_head(); ?>
 	<?php do_action('blocksy:head:end') ?>
 </head>
