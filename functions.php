@@ -20,11 +20,24 @@
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), null, true);
 
     // importar javaScript personalizado
-  wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/script.js', array(), null, true );
+    wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/script.js', array(), null, true );
   
   }
 
   add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+
+  add_filter('woocommerce_checkout_fields', 'custom_modify_fields');
+
+  function custom_modify_fields($fields) {
+
+    $fields['billing']['billing_first_name']['label'] = 'Hello World!';
+    $fields['billing']['billing_first_name']['required'] = false;
+    return $fields;
+  }
+
+
+
 
 
 

@@ -19,7 +19,7 @@ do_action('blocksy:content:bottom');
 		<div class="footer__top">
 			<div class="footer__top__brand" >
 				<img src="https://www.tiendascanavini.pe/wp-content/uploads/2024/11/logo_footer.webp" alt="Logo Scanavini">
-				<h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h6>
+				<h6>¡Scanavini, un mundo de soluciones en seguridad!</h6>
 			</div>
 
 			<div class="footer__top__contact" >
