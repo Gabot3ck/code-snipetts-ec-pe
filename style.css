@@ -814,7 +814,7 @@
 /*? * * *  FIN  GRID DE IMAGENES DE CATEGORIAS * * * */
 
 
-/*? * *  TERMINOS Y CONDICIONES * * */
+/*? * *  INFORMACIÓN LEGAL * * */
 .wrapper__terms{
   padding: 1rem 1rem;
   display: flex;
@@ -855,6 +855,7 @@
 }
 .wrapper__terms .terms__description {
   padding: .8rem 1rem;
+  min-height: calc(100vh - 580px);
 }
 .wrapper__terms .terms__description h2{
   text-align: center;
@@ -865,6 +866,12 @@
   margin-bottom: 35px;
   font-size: var(--fsize-4);
   text-align: justify;
+}
+/*? * * * Terminos y Condiciones * * * */
+/* .wrapper__terms .terms__description .accordion,
+.wrapper__terms .terms__description .accordion .accordion-collapse, */
+.terms__description .accordion .accordion-item, h3 {
+  margin: 0;
 }
 @media (min-width: 768px){
   .wrapper__terms{
@@ -893,7 +900,8 @@
   }
   .wrapper__terms .terms__description {
     padding: 1.2rem 0;
-    width: fit-content;
+    width: clamp(620px, 75%, 1100px);
+    min-height: calc(100vh - 300px);
   }
 }
 @media (min-width: 1024px){
@@ -903,13 +911,16 @@
     gap: 2.5rem;
   }
   .wrapper__terms .terms__description {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2.5rem;
   }
   .wrapper__terms .terms__description h2{
     margin-bottom: 30px;
   }
+  .wrapper__terms .terms__description .accordion{
+    background-color: red !important;
+  }
 }
-/*? * *  FIN TERMINOS Y CONDICIONES * * */
+/*? * *  FIN INFORMACIÓN LEGAL * * */
 
 
 /*? * * *   F O O T E R   * * */
