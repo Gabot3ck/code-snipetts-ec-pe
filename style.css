@@ -868,8 +868,21 @@
   text-align: justify;
 }
 /*? * * * Terminos y Condiciones * * * */
-/* .wrapper__terms .terms__description .accordion,
-.wrapper__terms .terms__description .accordion .accordion-collapse, */
+.terms__description .accordion .accordion-item{
+  border-color: 0;
+}
+.terms__description .accordion .accordion-item .accordion-button{
+  border-radius: 8px !important;
+  background-color: var(--color-bg-3);
+}
+.terms__description .accordion .accordion-item .accordion-button:not(.collapsed){
+	color: var(--color-bg-2);
+	background-color: var(--color-bg-4);
+	box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--color-bg-3) !important;
+}
+.terms__description .accordion .accordion-item .accordion-body{
+  padding-bottom: 1rem;
+}
 .terms__description .accordion .accordion-item, h3 {
   margin: 0;
 }
@@ -910,14 +923,21 @@
     min-height: 100vh;
     gap: 2.5rem;
   }
+  .wrapper__terms aside nav ul li a{
+    font-size: 1rem;
+  }
   .wrapper__terms .terms__description {
     padding: 1.5rem 2.5rem;
   }
   .wrapper__terms .terms__description h2{
     margin-bottom: 30px;
+    font-size: 2.2rem !important;
   }
+}
+@media (min-width: 1200px){
   .wrapper__terms .terms__description .accordion{
-    background-color: red !important;
+    margin: 0 auto;
+    max-width: clamp(680px, 90%, 8200px);
   }
 }
 /*? * *  FIN INFORMACIÓN LEGAL * * */
