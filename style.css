@@ -884,8 +884,10 @@
   padding-bottom: 1rem;
 }
 .terms__description .accordion .accordion-item .accordion-body p{
-  /* margin-bottom: 1.1rem; */
   font-size: 1rem;
+}
+.terms__description .accordion .accordion-item .accordion-body a{
+  color: var(--color-secondary);
 }
 .terms__description .accordion .accordion-item, h3 {
   margin: 0;
