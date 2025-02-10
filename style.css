@@ -886,6 +886,9 @@
 .terms__description .accordion .accordion-item .accordion-body p{
   font-size: 1rem;
 }
+.terms__description .accordion .accordion-item .accordion-body li{
+  margin-bottom: 1rem;
+}
 .terms__description .accordion .accordion-item .accordion-body a{
   color: var(--color-secondary);
 }
