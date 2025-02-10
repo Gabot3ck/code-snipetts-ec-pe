@@ -883,6 +883,10 @@
 .terms__description .accordion .accordion-item .accordion-body{
   padding-bottom: 1rem;
 }
+.terms__description .accordion .accordion-item .accordion-body p{
+  /* margin-bottom: 1.1rem; */
+  font-size: 1rem;
+}
 .terms__description .accordion .accordion-item, h3 {
   margin: 0;
 }
