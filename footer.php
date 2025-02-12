@@ -62,9 +62,9 @@ do_action('blocksy:content:bottom');
 		</div>
 		<div class="footer__bottom">
 			<div class="footer__bottom__policies">
-				<a href="https://www.tiendascanavini.pe/reembolso_devoluciones/">Política de Reembolso</a>
-				<a href="https://www.tiendascanavini.pe/politica-de-privacidad/">Política de Privacidad</a>
+				<a href="https://www.tiendascanavini.pe/informacion-legal/">Información Legal</a>
 				<a href="https://www.tiendascanavini.pe/terminos-y-condiciones/">Términos y Condiciones</a>
+				<a href="https://www.tiendascanavini.pe/politica-de-privacidad/">Política de Privacidad</a>
 				<a href="https://www.tiendascanavini.pe/nuestros-datos/">Nuestros datos</a>
 			</div>
 			<p>&copy; <?php echo date('Y'); ?> Scanavini Comercial  S.A.C.</p>
