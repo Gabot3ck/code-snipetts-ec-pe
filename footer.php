@@ -65,7 +65,7 @@ do_action('blocksy:content:bottom');
 				<a href="https://www.tiendascanavini.pe/informacion-legal/">Información Legal</a>
 				<a href="https://www.tiendascanavini.pe/terminos-y-condiciones/">Términos y Condiciones</a>
 				<a href="https://www.tiendascanavini.pe/politica-de-privacidad/">Política de Privacidad</a>
-				<a href="https://www.tiendascanavini.pe/nuestros-datos/">Nuestros datos</a>
+				<a href="https://www.tiendascanavini.pe/politica-de-cookies/">Política de Cookies</a>
 			</div>
 			<p>&copy; <?php echo date('Y'); ?> Scanavini Comercial  S.A.C.</p>
 		</div>

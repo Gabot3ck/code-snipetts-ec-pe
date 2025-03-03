@@ -1031,6 +1031,7 @@
   color: var(--color-bg-3);
   text-align: center;
 }
+
 @media (min-width: 576px) {
   .footer .footer__top{
     flex-direction: row;
@@ -1072,6 +1073,12 @@
   .footer .footer__bottom .footer__bottom__policies{
     max-width: 620px;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  .footer .footer__bottom a{
+    border-right: 1px solid var(--color-bg-3);
+  }
+  .footer .footer__bottom a:last-child{
+    border-right: none
   }
 }
 @media (min-width: 992px) {
