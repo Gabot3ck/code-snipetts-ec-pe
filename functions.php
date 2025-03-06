@@ -27,14 +27,7 @@
   add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 
-  add_filter('woocommerce_checkout_fields', 'custom_modify_fields');
 
-  function custom_modify_fields($fields) {
-
-    $fields['billing']['billing_first_name']['label'] = 'Hello World!';
-    $fields['billing']['billing_first_name']['required'] = false;
-    return $fields;
-  }
 
 
 
