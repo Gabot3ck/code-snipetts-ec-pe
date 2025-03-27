@@ -1,0 +1,28 @@
+# ----- 1.- BLOQUEO A wp-config.php
+# Bloquear acceso a WP-CONFIG
+<Files "wp-config.php">
+    Require all denied
+</Files>
+
+# Otro forma de bloquear
+<Files wp-login.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+
+
+#  ----- 2.- BLOQUEO A wp-includes.php -----
+# Bloquear ejecución de archivos PHP en wp-includes, pero permitir JS
+location ~* ^/wp-includes/.*\.php$ {
+    deny all;
+}
+
+# Permitir acceso a archivos estáticos (JS, CSS, imágenes, fuentes)
+location ~* ^/wp-includes/.*\.(js|css|png|jpg|jpeg|gif|ico|woff2|woff|ttf|svg|eot|otf|mp4|webp)$ {
+    allow all;
+    expires max;
+    log_not_found off;
+}
+
+
