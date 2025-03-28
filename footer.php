@@ -36,7 +36,7 @@ do_action('blocksy:content:bottom');
 
 				<div class="d-flex gap-2" >
 					<i class="bi bi-envelope-at-fill"></i>
-					<p>info@scanavini.com.pe</p>
+					<p>info@scanavini.pe</p>
 				</div>
 			</div>
 
