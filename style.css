@@ -176,7 +176,7 @@
 	position: absolute;
 	font-size: 1rem;
 	font-weight: 600;
-	color: var(--color-black);
+	color: var(--color-bg-1);
 }
 #carousel-item-1{
   background-image: url('https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bg-carrusel-header-1.jpg');
