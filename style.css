@@ -965,12 +965,12 @@
   background-color: var(--color-footer-top);
 }
 .footer .footer__top > div{
-  width: 180px;
+  width: 250px;
   margin-bottom: 15px;
 }
 .footer .footer__top  h6 {
   margin-bottom: 8px;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-bg-2);
 }
 .footer .footer__top .footer__top__brand{
@@ -985,13 +985,31 @@
   font-size: var(--fsize-2);
   font-weight: 400 !important;
 }
+.footer .footer__top .footer__top__contact .title{
+  margin-bottom: 1.2rem;
+  font-size: 21px;
+  font-weight: 600;
+}
+.footer .footer__top .footer__top__contact .wrapper-contact-for-customer{
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 12px;
+}
+.footer .footer__top .footer__top__contact .wrapper-icon-contact-for-customer{
+  padding-top: 8px;
+}
+.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer{
+  font-size: var(--fsize-4);
+  font-weight: 600;
+}
 .footer .footer__top .footer__top__contact p{
-  margin-bottom: 6px;
+  margin-bottom: 0px;
   font-size: var(--fsize-2);
 }
+/*
 .footer .footer__top .footer__top__contact .bi-geo-alt-fill + p{
   max-width: 150px;
-}
+} */
 .footer .footer__top .footer__top__marketing a{
   color: var(--color-bg-2);
 }
@@ -999,7 +1017,7 @@
   color: var(--color-bg-3);
 }
 .bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
-  font-size: 12px;
+  font-size: 20px;
 }
 .footer .footer__bottom{
   width: 100%;
