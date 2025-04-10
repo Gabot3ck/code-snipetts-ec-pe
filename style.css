@@ -975,9 +975,14 @@
 .footer .footer__top .footer__top__brand{
   margin: 15px 0 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  gap: 20px;
+  
 }
 .footer .footer__top .footer__top__brand img{
+  margin: 0 auto;
   width: 140px;
 }
 .footer .footer__top .footer__top__brand h6{
@@ -995,17 +1000,24 @@
   display: flex;
   gap: 13px;
 }
-.footer .footer__top .footer__top__contact .wrapper-icon-contact-for-customer{
+.footer .footer__top .footer__top__contact .wrapper-icon-contact-for-customer,
+.wrapper-icon-opening-hours{
   padding-top: 8px;
 }
-.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer{
-  margin-bottom: px;
+.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer,
+.title-opening-hours{
+  margin-bottom: 2px;
   font-size: 16px;
   font-weight: 600;
 }
-.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer + p{
+.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer + p,
+.title-opening-hours + p{
   margin-bottom: 0px;
   font-size: 13px;
+}
+.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer a{
+  text-decoration: underline;
+  color: var(--color-primary-light);
 }
 .footer .footer__top .footer__top__contact p{
   margin-bottom: 0px;
@@ -1015,6 +1027,11 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+}
+.footer .footer__top .footer__top__marketing .title{
+  margin-bottom: 1.2rem;
+  font-size: 19px;
+  font-weight: 600;
 }
 .footer .footer__top .footer__top__marketing a{
   color: var(--color-bg-2);
@@ -1044,8 +1061,14 @@
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
-.bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
-  font-size: 20px;
+.footer .footer__top .wrapper-opening-hours{
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.icon-showroom, .bi-telephone-fill, .bi-envelope-at-fill, .bi-clock{
+  font-size: 25px;
 }
 .footer .footer__bottom{
   width: 100%;
@@ -1079,11 +1102,6 @@
 }
 
 @media (min-width: 576px) {
-  .footer .footer__top{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
   .footer .footer__top .footer__top__marketing h6{
     text-align: center;
   }
@@ -1093,12 +1111,6 @@
   .footer .footer__bottom p{
     padding: 20px 0 16px;
   }
-  .footer .footer__top .footer__top__marketing{
-    flex-direction: column;
-  }
-  .footer .footer__top .footer__top__marketing .claims-book-container{
-    margin: 40px auto 0;
-  }
 }
 @media (min-width: 640px) {
   .footer .footer__top{
@@ -1107,21 +1119,30 @@
     justify-content: space-between;
   }
   .footer .footer__top .footer__top__brand{
-    flex-direction: column;
-    align-items: start;
     align-self: self-start;
   }
   .footer .footer__top .footer__top__brand img{
-    margin-bottom: 12px;
+    margin: 0;
     width: 120px;
   }
   .footer .footer__top .footer__top__brand h6{
     display: block;
+    margin-bottom: 25px;
   }
   .footer .footer__top .footer__top__marketing{
+    margin-bottom: 0;
+    flex-direction: column;
     align-self: self-start;
   }
-  
+  .footer .footer__top .footer__top__marketing .claims-book-container{
+    margin: 50px auto 30px;
+    width: 110px;
+    height: auto;
+  }
+  .footer .footer__top .footer__top__marketing .claims-book-container img{
+    width: 110px;
+    height: auto;
+  }
   .footer .footer__bottom .footer__bottom__policies{
     max-width: 620px;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -1139,13 +1160,10 @@
     justify-content: space-around;
   }
   .footer .footer__top > div {
-    width: 190px;
+    width: 250px;
   }
   .footer .footer__top h6 {
     margin-bottom: 12px;
-  }
-  .footer .footer__top .footer__top__contact .bi-geo-alt-fill + p{
-    max-width: 180px;
   }
   .footer .footer__top .footer__top__marketing h6{
     text-align: start;
@@ -1157,6 +1175,10 @@
   .footer .footer__top .footer__top__marketing .claims-book-container img{
     width: 180px;
     height: auto;
+  }
+  .footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer + p,
+  .title-opening-hours + p{
+    font-size: 15px;
   }
 }
 @media (min-width: 1024px) {
@@ -1190,11 +1212,15 @@
     font-size: 15px;
   }
   .footer .footer__top > div {
-    width: 200px;
+    width: 280px;
 }
-  .bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
+  .bi-telephone-fill, .bi-envelope-at-fill{
     margin-right: 5px;
-    font-size: 16px;
+    font-size: 30px;
+  }
+  .footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer + p,
+  .title-opening-hours + p{
+    font-size: 15px;
   }
 }
 /*? * * *   F I N   F O O T E R   * * */
