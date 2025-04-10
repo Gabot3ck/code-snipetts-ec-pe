@@ -1041,7 +1041,7 @@
   height: 100px;
 }
 .footer .footer__top .footer__top__marketing .claims-book-container:hover img{
-  transform: scale(1.05n);
+  transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 .bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
