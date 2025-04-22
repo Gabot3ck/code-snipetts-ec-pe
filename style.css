@@ -778,17 +778,6 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-/* .category-images-grid .card .category-images-grid__budget::after{
-  content: "";
-  position: absolute;
-  border: 2px solid var(--color-bg-2);
-  border-top: none;
-  border-left: none;
-  bottom: -5px;
-  left: -3px;
-  width: 60px;
-  height: 20px;
-} */
 .category-images-grid .card img{
   height: calc(100% - 20px);
 }
@@ -1015,7 +1004,8 @@
   margin-bottom: 0px;
   font-size: 13px;
 }
-.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer a{
+.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer a,
+.title-opening-hours{
   text-decoration: underline;
   color: var(--color-primary-light);
 }
