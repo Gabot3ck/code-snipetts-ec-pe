@@ -91,95 +91,365 @@
 
 /*?       HOME    */
 /*? CARRUSEL DEL HEADER*/
-#homeHeaderCarousel{
-	margin: 0 auto;
-	max-width: 1440px;
-	height: 80vh;
-	min-height: 400px;
-	background-color: var(--color-bg-3);
+/* Estilos base del carrusel */
+#homeHeaderCarousel {
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 450px;
+  max-height: 600px;
+  height: auto;
+  background-color: var(--color-bg-3);
+  position: relative;
+  overflow: hidden;
 }
+
+/* Contenedor interno */
 #homeHeaderCarousel .carousel-inner {
   height: 100%;
 }
-#homeHeaderCarousel .carousel-inner .carousel-item {
-  padding: 3.5rem 2rem;
+
+/* Configuración básica de los slides (móvil) */
+#homeHeaderCarousel .carousel-item {
+  height: 100%;
+  min-height: 450px;
+  max-height: 600px;
+  padding: 1rem 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#homeHeaderCarousel .carousel-inner .carousel-item section{
-  margin-left: 5.5rem;
-}
-#homeHeaderCarousel .carousel-inner .carousel-item h1{
-  margin: 0;
-  font-size: var(--fsize-7);
-  font-weight: 600;
-  color: var(--color-bg-2);
-}
-#homeHeaderCarousel .carousel-inner .carousel-item p{
-  margin: 30px 0;
-  max-width: 360px;
-  font-size: var(--fsize-4);
-}
-#homeHeaderCarousel .carousel-item .container-img img {
+
+/* Fondo del carrusel con gradiente (móvil - vertical) */
+#homeHeaderCarousel .carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+  z-index: 0;
 }
+
+/* Fondos específicos para cada slide */
+#carousel-item-1 {
+  background-image: url('https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bg-carrusel-header-1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Sección de texto (móvil) */
+#homeHeaderCarousel .carousel-inner .carousel-item section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sección de imagen (móvil) */
+#homeHeaderCarousel .carousel-inner .carousel-item .container-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Control de imágenes (móvil) */
+#homeHeaderCarousel .carousel-item .container-img img {
+  max-height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Encabezados y texto (móvil) */
+#homeHeaderCarousel .carousel-inner .carousel-item h1 {
+  margin: 0;
+  font-size: calc(var(--fsize-7) * 0.7);
+  font-weight: 600;
+  color: var(--color-bg-2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#homeHeaderCarousel .carousel-inner .carousel-item p {
+  margin: 10px 0;
+  font-size: calc(var(--fsize-4) * 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Pantallas pequeñas (576px y más) */
+@media (min-width: 576px) {
+  #homeHeaderCarousel,
+  #homeHeaderCarousel .carousel-item {
+    min-height: 500px;
+    max-height: 650px;
+  }
+  
+  #homeHeaderCarousel .carousel-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item section {
+    max-width: 500px;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item .container-img {
+    max-width: 320px;
+  }
+  
+  #homeHeaderCarousel .carousel-item .container-img img {
+    max-height: 230px;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item h1 {
+    font-size: calc(var(--fsize-7) * 0.8);
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item p {
+    font-size: calc(var(--fsize-4) * 0.85);
+    margin: 15px 0;
+  }
+}
+
+/* Pantallas medianas (768px y más) */
+@media (min-width: 768px) {
+  #homeHeaderCarousel,
+  #homeHeaderCarousel .carousel-item {
+    min-height: 550px;
+    max-height: 700px;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item section {
+    max-width: 550px;
+    margin-bottom: 2rem;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item .container-img {
+    max-width: 400px;
+  }
+  
+  #homeHeaderCarousel .carousel-item .container-img img {
+    max-height: 280px;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item h1 {
+    font-size: calc(var(--fsize-7) * 0.85);
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item p {
+    font-size: calc(var(--fsize-4) * 0.9);
+  }
+}
+
+/* Pantallas grandes (992px y más) - Cambio a diseño horizontal */
+@media (min-width: 992px) {
+  #homeHeaderCarousel,
+  #homeHeaderCarousel .carousel-item {
+    min-height: 400px;
+    max-height: 600px;
+    height: 65vh;
+  }
+  
+  /* Cambio a layout horizontal */
+  #homeHeaderCarousel .carousel-item {
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Cambio a gradiente horizontal */
+  #homeHeaderCarousel .carousel-item::before {
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+  }
+  
+  /* Sección de texto alineada a la izquierda */
+  #homeHeaderCarousel .carousel-inner .carousel-item section {
+    width: 45%;
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding-right: 20px;
+  }
+  
+  /* Sección de imagen a la derecha */
+  #homeHeaderCarousel .carousel-inner .carousel-item .container-img {
+    width: 45%; /* Reducido para evitar que se agrande demasiado */
+    max-width: 450px; /* Limitado para evitar imágenes enormes */
+  }
+  
+  /* Control del tamaño de las imágenes */
+  #homeHeaderCarousel .carousel-item .container-img img {
+    max-height: 320px; /* Reducido para evitar imágenes demasiado grandes */
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item h1 {
+    font-size: var(--fsize-7);
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item p {
+    font-size: var(--fsize-4);
+  }
+}
+
+/* Pantallas extra grandes (1200px y más) */
+@media (min-width: 1200px) {
+  #homeHeaderCarousel {
+    max-width: 1440px; /* Ancho máximo solo para pantallas grandes */
+  }
+  
+  #homeHeaderCarousel,
+  #homeHeaderCarousel .carousel-item {
+    min-height: 550px;
+    max-height: 650px;
+    height: 80vh;
+    justify-content: center !important;
+    gap: 5rem;
+  }
+  
+  /* Ajustes para pantallas muy anchas */
+  #homeHeaderCarousel .carousel-inner .carousel-item section {
+    width: 40%;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item .container-img {
+    width: 48%;
+    max-width: 520px;
+  }
+  
+  /* Control del tamaño máximo de las imágenes */
+  #homeHeaderCarousel .carousel-item .container-img img {
+    max-height: 400px; /* Limitado para mantener proporción */
+  }
+}
+
+/* Optimización para dispositivos en landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+  #homeHeaderCarousel,
+  #homeHeaderCarousel .carousel-item {
+    min-height: 320px;
+    max-height: 400px;
+    height: 90vh;
+  }
+  
+  #homeHeaderCarousel .carousel-item {
+    padding: 0.75rem;
+    flex-direction: row;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item section {
+    width: 45%;
+    margin-bottom: 0;
+    padding-right: 15px;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item .container-img {
+    width: 45%;
+  }
+  
+  #homeHeaderCarousel .carousel-item .container-img img {
+    max-height: 200px;
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item h1 {
+    font-size: calc(var(--fsize-7) * 0.6);
+  }
+  
+  #homeHeaderCarousel .carousel-inner .carousel-item p {
+    font-size: calc(var(--fsize-4) * 0.7);
+    margin: 8px 0;
+  }
+}
+
+/* Controles de navegación */
 #homeHeaderCarousel .carousel-control-prev,
 #homeHeaderCarousel .carousel-control-next {
-	position: absolute;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 45px; 
-  width: 45px;
+  height: 35px; 
+  width: 35px;
   background-color: var(--color-bg-4);
-	border: 1px solid var(--color-bg-1);
+  border: 1px solid var(--color-bg-1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0.8;
-  transition: background-color 0.3s, opacity 0.3s;
+  z-index: 10;
 }
-/* Posicionar prev y next a los lados */
+
 #homeHeaderCarousel .carousel-control-prev {
-  left: 20px; 
+  left: 10px; 
 }
+
 #homeHeaderCarousel .carousel-control-next {
-  right: 20px;
+  right: 10px;
 }
-/* Cambiar color al hacer hover */
-#homeHeaderCarousel .carousel-control-prev:hover,
-#homeHeaderCarousel .carousel-control-next:hover {
-  background-color: var(--color-black);
-  opacity: 1;
-}
-#homeHeaderCarousel .carousel-indicators [data-bs-target]{
-	text-indent: 0 ;
-}
+
 /* Indicadores del carrusel */
 #homeHeaderCarousel .carousel-indicators button {
-	margin: 0 15px 15px;
-  width: 150px;
-	height: 2px;
+  margin: 0 5px;
+  width: 30px;
+  height: 2px;
   background-color: var(--color-bg-4);
   opacity: 0.7;
 }
-/* Indicador activo */
+
 #homeHeaderCarousel .carousel-indicators .active {
   background-color: var(--color-primary);
 }
-/* Efecto hover */
-#homeHeaderCarousel .carousel-indicators button:hover {
-  background-color: var(--color-primary);
+
+/* Ajuste de controles para pantallas más grandes */
+@media (min-width: 768px) {
+  #homeHeaderCarousel .carousel-control-prev,
+  #homeHeaderCarousel .carousel-control-next {
+    height: 40px;
+    width: 40px;
+  }
+  
+  #homeHeaderCarousel .carousel-control-prev {
+    left: 15px; 
+  }
+
+  #homeHeaderCarousel .carousel-control-next {
+    right: 15px;
+  }
+  
+  #homeHeaderCarousel .carousel-indicators button {
+    width: 50px;
+    margin: 0 6px;
+  }
 }
-/* Tooltip */
-.carousel-tooltip {
-	position: absolute;
-	font-size: 1rem;
-	font-weight: 600;
-	color: var(--color-bg-1);
-}
-#carousel-item-1{
-  background-image: url('https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bg-carrusel-header-1.jpg');
+
+@media (min-width: 992px) {
+  #homeHeaderCarousel .carousel-control-prev,
+  #homeHeaderCarousel .carousel-control-next {
+    height: 45px;
+    width: 45px;
+  }
+  
+  #homeHeaderCarousel .carousel-control-prev {
+    left: 20px; 
+  }
+
+  #homeHeaderCarousel .carousel-control-next {
+    right: 20px;
+  }
+  
+  #homeHeaderCarousel .carousel-indicators button {
+    width: 80px;
+    margin: 0 8px;
+  }
 }
 /*? FIN CARRUSEL DEL HEADER */
 
@@ -809,13 +1079,13 @@
   animation-delay: 0.9s;
 }
 .scv-anim-delay-2 {
-  animation-delay: 1.6s;
+  animation-delay: 1.3s;
 }
 .scv-anim-delay-3 {
-  animation-delay: 2.3s;
+  animation-delay: 0.9s;
 }
 .scv-anim-delay-4 {
-  animation-delay: 2.9s;
+  animation-delay: 1.3s;
 }
 
 /* Clases específicas para cada tipo de animación */
