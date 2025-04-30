@@ -103,4 +103,32 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+
+  //Animaciones Implementando la detección con Intersection Observer API
+  const animatedElements = document.querySelectorAll('.scv-anim');
+  
+  // Configurar el observador
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2
+  };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Agregar la nueva clase que inicia la animación
+        entry.target.classList.add('scv-anim-active');
+        
+        // Dejar de observar después de aplicar la animación
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Observar cada elemento
+  animatedElements.forEach(element => {
+    observer.observe(element);
+  });
 });
