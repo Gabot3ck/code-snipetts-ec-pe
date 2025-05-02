@@ -328,7 +328,8 @@
   
   /* Control del tamaño máximo de las imágenes */
   #homeHeaderCarousel .carousel-item .container-img img {
-    max-height: 400px; /* Limitado para mantener proporción */
+    max-height: 450px !important; /* Limitado para mantener proporción */
+    max-width: 150%;
   }
 }
 
