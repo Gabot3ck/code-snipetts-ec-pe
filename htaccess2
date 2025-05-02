@@ -13,16 +13,17 @@
 
 
 #  ----- 2.- BLOQUEO A wp-includes.php -----
-# Bloquear ejecución de archivos PHP en wp-includes, pero permitir JS
-location ~* ^/wp-includes/.*\.php$ {
-    deny all;
-}
+# Añade esto al archivo .htaccess en la raíz de tu sitio WordPress
+# Proteger wp-includes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-includes/(.*)$ - [R=404,L]
+</IfModule>
 
-# Permitir acceso a archivos estáticos (JS, CSS, imágenes, fuentes)
-location ~* ^/wp-includes/.*\.(js|css|png|jpg|jpeg|gif|ico|woff2|woff|ttf|svg|eot|otf|mp4|webp)$ {
-    allow all;
-    expires max;
-    log_not_found off;
-}
+# Permitir el acceso a ciertos archivos específicos necesarios para el funcionamiento
+<FilesMatch "^(wp-tinymce\.min\.js|ms-files\.php|wp-content/plugins/.*?\.php)$">
+Allow from all
+</FilesMatch>
 
 
