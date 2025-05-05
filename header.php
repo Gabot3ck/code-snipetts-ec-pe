@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<!-- importar icons bootsatrap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<!-- Precargar la imagen de fondo con alta prioridad -->
+	<link rel="preload" href="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/bg-carrusel-header-1.jpg" as="image" fetchpriority="high">
+	<!-- Precargar la primera imagen PNG del carrusel -->
+	<link rel="preload" href="https://www.tiendascanavini.pe/wp-content/uploads/2025/01/cerraduras-digitales-slide1.png" as="image" fetchpriority="high">
 	<!-- importar chatbot fastbots -->
 	<script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cm4lgw16e02ans5bnoiqlv9zv"></script>
 	
