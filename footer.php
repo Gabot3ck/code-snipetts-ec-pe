@@ -74,27 +74,28 @@ do_action('blocksy:content:bottom');
 
 		<div class="footer__top__marketing">
 			<div>
-			<h6 class="title" >Síguenos en:</h6>
+				<h6 class="title" >Síguenos en:</h6>
 
-			<div class="d-flex gap-2 justify-content-around justify-content-xs-center">
-				<a href="https://www.tiktok.com/@scanavini.peru" target="_blank">
-				<i class="bi bi-tiktok"></i>
-				</a>
-				<a href="https://www.instagram.com/scanavini_peru" target="_blank">
-				<i class="bi bi-instagram"></i>
-				</a>
-				<a href="https://www.facebook.com/ScanaviniPeru" target="_blank">
-				<i class="bi bi-facebook"></i>
-				</a>
-				<a href="https://www.linkedin.com/company/scanavini-comercial-sac" target="_blank">
-				<i class="bi bi-linkedin"></i>
-				</a>
-			</div>
+				<div class="d-flex gap-2 justify-content-around justify-content-xs-center">
+					<a href="https://www.tiktok.com/@scanavini.peru" target="_blank" rel="noopener">
+						<i class="bi bi-tiktok"></i>
+						<span class="visually-hidden">TikTok</span>
+					</a>
+					<a href="https://www.instagram.com/scanavini_peru" target="_blank" rel="noopener">
+						<i class="bi bi-instagram"></i>
+					</a>
+					<a href="https://www.facebook.com/ScanaviniPeru" target="_blank" rel="noopener">
+						<i class="bi bi-facebook"></i>
+					</a>
+					<a href="https://www.linkedin.com/company/scanavini-comercial-sac" target="_blank" rel="noopener">
+						<i class="bi bi-linkedin"></i>
+					</a>
+				</div>
 			</div>
 
 			<div class="claims-book-container" >
 				<a href="https://reclamaciones.tiendascanavini.pe" target="_blank">
-					<img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/03/libro-de-reclamaciones-virtual.png" alt="libro de reclamaciones scanavini" class="img-fluid">
+					<img src="https://www.tiendascanavini.pe/wp-content/uploads/2025/04/libro-de-reclamaciones-virtual.png" alt="libro de reclamaciones scanavini" class="img-fluid">
 				</a>
 			</div>
 		</div>

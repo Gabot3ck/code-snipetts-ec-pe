@@ -185,6 +185,67 @@
   font-size: calc(var(--fsize-4) * 0.8);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+/* Animaciones */
+@keyframes slideFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Para la imagen (derecha a izquierda) */
+/* .slider-image {
+  transform: translateX(100px);
+  animation: slideFromRight 0.8s ease forwards;
+  animation-delay: 0.5s;
+} */
+
+/* Para el texto (izquierda a derecha) */
+/* .slider-title {
+  transform: translateX(-100px);
+  animation: slideFromLeft 0.8s ease forwards;
+  animation-delay: 0.8s;
+} */
+/* .slider-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideFromLeft 0.8s ease forwards;
+  animation-delay: 0.95s;
+} */
+
+/* Para el botón (abajo hacia arriba) */
+/* .slider-button {
+  transform: translateY(50px);
+  animation: slideFromBottom 0.8s ease forwards;
+  animation-delay: 1.2s;
+} */
 
 /* Pantallas pequeñas (576px y más) */
 @media (min-width: 576px) {
