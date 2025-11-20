@@ -385,6 +385,9 @@ figure a,
 .woocommerce-page ul.products li.product {
     position: relative;
 }
+.woocommerce ul.products li.product figure{
+  max-height: 220px;
+}
 .scanavini-badge-descuento {
 	position: absolute;
 	top: 15px;
@@ -408,7 +411,7 @@ figure a,
 	color: var(--color-primary)!important;
 }
 
-/*-*- GRID DE PRODUCTOS WOOCOMMERCE-*_*/
+/*?-*- GRID DE PRODUCTOS WOOCOMMERCE-*_*/
 /* Base: grid para pantallas medianas y grandes */
 .woocommerce ul.products {
   display: grid !important;
@@ -441,7 +444,7 @@ figure a,
   }
 
   /* Tamaño equivalente a 2 columnas en grid */
-  .woocommerce ul.products li.product {
+  .woocommerce ul.products li.product{
     flex: 0 0 calc(50% - 0.75rem); /* === tamaño de una card de 2 columnas */
     max-width: calc(50% - 0.75rem);
     scroll-snap-align: start;
