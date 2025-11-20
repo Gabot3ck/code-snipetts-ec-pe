@@ -1574,13 +1574,12 @@ span:first-child{
   max-width: 1420px;
   display: flex;
   justify-content: space-evenly;
-  /* background-color: var(--color-bg-3); */
 }
 .card-container-pillars .card{
   padding: 0;
   border: none;
 }
-.card-container-pillars .card h5{
+.card-container-pillars .card h2{
   font-size: var(--fsize-4);
   font-weight: 700;
 }
