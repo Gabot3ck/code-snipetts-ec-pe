@@ -151,6 +151,12 @@ nav[class*=mobile-menu] li[class*=current-menu-]>.ct-menu-link
 	color: #FF8464 !important;
 }
 /*!  FIN  MENU  MOBILE  *-*-*/
+
+/*?  POP UP CYBER  *-*-*/
+.otter-popup__modal_wrap_overlay{
+	background-color: rgba(0,0,0,0.7) !important;
+}
+/*!?  FIN  UP CYBER *-*-*/
 /** ============================================ **/
 /**    F I N     C O M P O N E N T E S     **
 /** ============================================ **/
