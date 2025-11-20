@@ -37,7 +37,6 @@
   --fsize-6: clamp(1.7rem, 1.1rem + 1.7vw, 2.65rem);
   --fsize-7: clamp(1.55rem, 1.8rem + 2.2vw, 3.2rem);
 }
-
 /** =============================  **/
 /**      C O M P O N E N T E S     **
 /** =============================  **/
@@ -152,11 +151,17 @@ nav[class*=mobile-menu] li[class*=current-menu-]>.ct-menu-link
 }
 /*!  FIN  MENU  MOBILE  *-*-*/
 
-/*?  POP UP CYBER  *-*-*/
+/*?  POPUP CYBER  *-*-*/
 .otter-popup__modal_wrap_overlay{
 	background-color: rgba(0,0,0,0.7) !important;
 }
-/*!?  FIN  UP CYBER *-*-*/
+@media (max-width: 600px) {
+	:is(.wp-block-themeisle-blocks-modal,.wp-block-themeisle-blocks-popup) .otter-popup__modal_content{
+		max-width: 380px;
+		max-height: 380px;
+	}
+}
+/*!?  FIN  POPUP CYBER *-*-*/
 /** ============================================ **/
 /**    F I N     C O M P O N E N T E S     **
 /** ============================================ **/
@@ -417,7 +422,7 @@ figure a,
 	color: var(--color-primary)!important;
 }
 
-/*?-*- GRID DE PRODUCTOS WOOCOMMERCE-*_*/
+/*-*- GRID DE PRODUCTOS WOOCOMMERCE-*_*/
 /* Base: grid para pantallas medianas y grandes */
 .woocommerce ul.products {
   display: grid !important;
