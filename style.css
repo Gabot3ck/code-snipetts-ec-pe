@@ -422,29 +422,33 @@ figure a,
 	color: var(--color-primary)!important;
 }
 
-/*-*- GRID DE PRODUCTOS WOOCOMMERCE-*_*/
+/*-*- GRID DE PRODUCTOS SHORTCODE WOOCOMMERCE-*_*/
 /* Base: grid para pantallas medianas y grandes */
-.woocommerce ul.products {
+.product__shortcode__container{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.product__shortcode__container  .woocommerce ul.products {
   display: grid !important;
   gap: 1rem;
 }
 
 /* Tablet: 3 columnas */
 @media (min-width: 641px) and (max-width: 960px) {
-  .woocommerce ul.products {
+  .product__shortcode__container  .woocommerce ul.products {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
 /* Desktop: 5 columnas */
 @media (min-width: 961px) {
-  .woocommerce ul.products.columns-5 {
+  .product__shortcode__container .woocommerce ul.products.columns-5 {
     grid-template-columns: repeat(5, 1fr) !important;
   }
 }
 /* Mobile: fila con scroll, cards del tamaño de una grid de 2 columnas */
 @media (max-width: 640px) {
-  .woocommerce ul.products {
+  .product__shortcode__container .woocommerce ul.products {
     display: flex !important;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -455,7 +459,7 @@ figure a,
   }
 
   /* Tamaño equivalente a 2 columnas en grid */
-  .woocommerce ul.products li.product{
+  .product__shortcode__container .woocommerce ul.products li.product{
     flex: 0 0 calc(50% - 0.75rem); /* === tamaño de una card de 2 columnas */
     max-width: calc(50% - 0.75rem);
     scroll-snap-align: start;
@@ -463,7 +467,7 @@ figure a,
   }
 
   /* Asegurar que las imágenes no se estiren */
-  .woocommerce ul.products li.product img {
+  .product__shortcode__container .woocommerce ul.products li.product img {
     width: 100%;
     height: auto;
     object-fit: contain;
