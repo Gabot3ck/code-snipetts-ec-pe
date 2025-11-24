@@ -196,8 +196,13 @@ nav[class*=mobile-menu] li[class*=current-menu-]>.ct-menu-link
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
-	padding: 1.5rem 2rem 50px;
+	padding: 1.5rem 0 50px;
 	background-color: var(--color-bg-3);
+}
+@media (min-width: 1000px){
+	.ct-container section{
+		padding: 1.5rem 2.5rem 50px;
+	}
 }
 [data-sidebar]{
 	grid-column-gap: 0 !important ;
@@ -422,55 +427,89 @@ figure a,
 	color: var(--color-primary)!important;
 }
 
-/*-*- GRID DE PRODUCTOS SHORTCODE WOOCOMMERCE-*_*/
+/*-*- GRID DE PRODUCTOS  WOOCOMMERCE INCLUYE SHORTCODE-*_*/
 /* Base: grid para pantallas medianas y grandes */
-.product__shortcode__container{
-	max-width: 1440px;
-	margin: 0 auto;
-}
-.product__shortcode__container  .woocommerce ul.products {
-  display: grid !important;
-  gap: 1rem;
+/* Mobile: 2 columnas + cards más compactas */
+@media (max-width: 640px) {
+  .woocommerce ul.products {
+		padding: 0 1rem;
+    min-width: 320px;          
+    width: 100%;
+    overflow-x: auto;          
+    overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Quitar márgenes que Woo mete por defecto */
+  .woocommerce ul.products li.product {
+    margin: 0 !important;
+    padding: 0.5rem !important; /* compactar card */
+  }
+
+  /* Imagen más pequeña*/
+.woocommerce ul.products li.product .ct-media-container,
+  .woocommerce ul.products li.product img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;    /* respeta ratio actual */
+    object-fit: contain;
+  }
+/* Título más chico y con menos alto */
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 0.9rem !important;
+    line-height: 1.2 !important;
+    margin: 0.4rem 0 0.2rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* máximo 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.2em;         /* asegura altura pareja */
+  }
+/* Precio más pequeño */
+  .woocommerce ul.products li.product .price {
+    font-size: 0.95rem !important;
+  }
+/* Categorías/meta más discretas (opcional) */
+  .woocommerce ul.products li.product .entry-meta {
+    font-size: 0.75rem !important;
+    line-height: 1.1 !important;
+  }
+/* Botón más compacto */
+  .woocommerce ul.products li.product .button,
+  .woocommerce ul.products li.product .ct-woo-card-actions .button {
+    font-size: 0.85rem !important;
+    padding: 0.45rem 0.6rem !important;
+    width: 100%;
+    text-align: center;
+  }
+/* Badge descuento un poquito más chico */
+  .woocommerce ul.products li.product .scanavini-badge-descuento,
+  .woocommerce ul.products li.product .onsale {
+    font-size: 0.75rem !important;
+    padding: 0.2rem 0.35rem !important;
+  }
 }
 
 /* Tablet: 3 columnas */
 @media (min-width: 641px) and (max-width: 960px) {
-  .product__shortcode__container  .woocommerce ul.products {
+  .woocommerce ul.products {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
 /* Desktop: 5 columnas */
 @media (min-width: 961px) {
-  .product__shortcode__container .woocommerce ul.products.columns-5 {
+	.woocommerce ul.products{
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+  .woocommerce ul.products.columns-5 {
     grid-template-columns: repeat(5, 1fr) !important;
-  }
-}
-/* Mobile: fila con scroll, cards del tamaño de una grid de 2 columnas */
-@media (max-width: 640px) {
-  .product__shortcode__container .woocommerce ul.products {
-    display: flex !important;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Tamaño equivalente a 2 columnas en grid */
-  .product__shortcode__container .woocommerce ul.products li.product{
-    flex: 0 0 calc(50% - 0.75rem); /* === tamaño de una card de 2 columnas */
-    max-width: calc(50% - 0.75rem);
-    scroll-snap-align: start;
-    margin: 0 !important;
-  }
-
-  /* Asegurar que las imágenes no se estiren */
-  .product__shortcode__container .woocommerce ul.products li.product img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
   }
 }
 /*-*-* UI DE PRODUCTO *-*-*/
