@@ -2508,7 +2508,7 @@ span:first-child{
   gap: 20px;
   
 }
-.footer .footer__top .footer__top__brand img{
+.footer .footer__top .footer__top__brand .logo_img{
   margin: 0 auto;
   width: 140px;
 }
@@ -2517,21 +2517,21 @@ span:first-child{
   font-size: var(--fsize-2);
   font-weight: 400 !important;
 }
-.footer .footer__top .footer__top__contact .title{
+.footer .footer__top  .title{
   margin-bottom: 1.2rem;
   font-size: 19px;
   font-weight: 600;
 }
-.footer .footer__top .footer__top__contact .wrapper-contact-for-customer{
+.footer .footer__top .wrapper-contact-for-customer{
   margin-bottom: 25px;
   display: flex;
   gap: 13px;
 }
-.footer .footer__top .footer__top__contact .wrapper-icon-contact-for-customer,
+.footer .footer__top .wrapper-icon-contact-for-customer,
 .wrapper-icon-opening-hours{
   padding-top: 8px;
 }
-.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer .title-contact-for-customer,
+.footer .footer__top  .title-contact-for-customer,
 .title-opening-hours{
   margin-bottom: 2px;
   font-size: 16px;
@@ -2542,7 +2542,7 @@ span:first-child{
   margin-bottom: 0px;
   font-size: 13px;
 }
-.footer .footer__top .footer__top__contact .wrapper-body-contact-for-customer a,
+.footer .footer__top a,
 .title-opening-hours{
   text-decoration: underline;
   color: var(--color-primary-light);
@@ -2598,6 +2598,9 @@ span:first-child{
 .icon-showroom, .bi-telephone-fill, .bi-envelope-at-fill, .bi-clock{
   font-size: 25px;
 }
+.bi-whatsapp{
+  font-size: 30px;
+}
 .footer .footer__bottom{
   width: 100%;
   background-color: var(--color-footer-bottom);
@@ -2633,7 +2636,7 @@ span:first-child{
   .footer .footer__top .footer__top__marketing h6{
     text-align: center;
   }
-  .footer .footer__top .footer__top__brand img{
+  .footer .footer__top .footer__top__brand .logo_img{
     width: 120px;
   }
   .footer .footer__bottom p{
@@ -2645,11 +2648,12 @@ span:first-child{
     padding: 1rem 1rem 0;
     flex-direction: row;
     justify-content: space-between;
+    align-items: start;
   }
   .footer .footer__top .footer__top__brand{
     align-self: self-start;
   }
-  .footer .footer__top .footer__top__brand img{
+  .footer .footer__top .footer__top__brand .logo_img{
     margin: 0;
     width: 120px;
   }
@@ -2661,6 +2665,10 @@ span:first-child{
     margin-bottom: 0;
     flex-direction: column;
     align-self: self-start;
+  }
+  .footer .footer__top__contact,
+  .footer .footer__top__marketing{
+    margin-top: 65px;
   }
   .footer .footer__top .footer__top__marketing .claims-book-container{
     margin: 50px auto 30px;
@@ -2687,12 +2695,14 @@ span:first-child{
     padding: 1.5rem 1rem 0;
     justify-content: space-around;
   }
-  .footer .footer__top > div {
-    width: 250px;
-  }
   .footer .footer__top h6 {
     margin-bottom: 12px;
   }
+  .footer .footer__top__contact,
+  .footer .footer__top__marketing{
+    margin-top: 85px;
+  }
+
   .footer .footer__top .footer__top__marketing h6{
     text-align: start;
   }
@@ -2714,10 +2724,13 @@ span:first-child{
     padding: 1.5rem 2.5rem 0;
     justify-content: space-between;
   }
+  .footer .footer__top > div {
+    width: 300px;
+  }
   .footer .footer__bottom .footer__bottom__policies{
     max-width: 800px;
   }
-  .footer .footer__top .footer__top__brand img{
+  .footer .footer__top .footer__top__brand .logo_img{
     width: 140px;
   }
 }
@@ -2729,19 +2742,19 @@ span:first-child{
   .footer .footer__top h6 {
     font-size: 17px;
   }
+  .footer .footer__top > div {
+    width: 330px;
+  }
   .footer .footer__bottom .footer__bottom__policies{
     max-width: 1100px;
   }
-  .footer .footer__top .footer__top__brand img{
+  .footer .footer__top .footer__top__brand .logo_img{
     width: 160px;
   }
   .footer .footer__top .footer__top__brand h6,
   .footer .footer__top .footer__top__contact p{
     font-size: 15px;
   }
-  .footer .footer__top > div {
-    width: 280px;
-}
   .bi-telephone-fill, .bi-envelope-at-fill{
     margin-right: 5px;
     font-size: 30px;
