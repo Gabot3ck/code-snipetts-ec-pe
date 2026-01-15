@@ -2331,7 +2331,255 @@ span:first-child{
 /** ============================================ **/
 
 
+/* =========================================================
+  THANK YOU / ORDER RECEIVED - UI WC
+   ========================================================= */
+.woocommerce-order-received .woocommerce,
+.woocommerce-order-received .entry-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
 
+/* ---------- Header personalizado ---------- */
+.store-thankyou-header {
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  overflow: hidden;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.store-header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.store-logo .logo-image {
+  width: 200px;
+  display: block;
+}
+
+.order-success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.success-icon svg {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.order-heading {
+  margin: 0 0 6px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #132842; /* neutral.dark */
+}
+
+.order-message {
+  margin: 15px 0;
+  color: rgba(19, 40, 66, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  width: full;
+  max-width: 550px;
+  text-align: center;
+}
+
+/* ---------- Resumen preview (4 items) ---------- */
+.order-summary-preview {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.04);
+}
+
+.summary-icon {
+  font-size: 18px;
+  line-height: 1;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--color-bg-2);
+}
+
+.summary-text {
+  display: grid;
+  gap: 2px;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: rgba(19, 40, 66, 0.65);
+}
+
+.summary-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #132842;
+}
+
+/* ---------- Sección detalles WooCommerce ---------- */
+.woocommerce-order-details {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+.woocommerce-order-details__title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #132842;
+}
+
+/* Tabla */
+.woocommerce-order-details table.woocommerce-table--order-details {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.08);
+	padding: 1rem;
+}
+
+.woocommerce-order-details table thead th {
+  background: rgba(19, 40, 66, 0.04);
+  color: #132842;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.woocommerce-order-details table tbody td {
+  padding: 12px 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  font-size: 14px;
+}
+
+.woocommerce-order-details table tbody tr:nth-child(even) td {
+  background: rgba(0,0,0,.015);
+}
+
+/* Imagen producto */
+.woocommerce-table__product-image img {
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  display: block;
+  background: #fff;
+}
+
+/* Link de producto */
+.woocommerce-table__product-name a {
+  color: #116cf9; /* accent */
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.woocommerce-table__product-name a:hover {
+  text-decoration: underline;
+}
+
+/* Cantidad */
+.product-quantity {
+  color: rgba(19, 40, 66, 0.7);
+  font-weight: 700;
+}
+
+/* Totales */
+.woocommerce-order-details tfoot th,
+.woocommerce-order-details tfoot td {
+  padding: 12px 14px;
+  font-size: 14px;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.woocommerce-order-details tfoot tr:last-child th,
+.woocommerce-order-details tfoot tr:last-child td {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .order-summary-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .store-thankyou-header {
+    padding: 16px;
+  }
+
+  .order-heading {
+    font-size: 18px;
+  }
+
+  .order-summary-preview {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabla: scroll horizontal en móviles */
+  .woocommerce-order-details {
+    padding: 14px;
+  }
+
+  .woocommerce-order-details table.woocommerce-table--order-details {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .woocommerce-order-details table thead,
+  .woocommerce-order-details table tbody,
+  .woocommerce-order-details table tfoot,
+  .woocommerce-order-details table tr,
+  .woocommerce-order-details table th,
+  .woocommerce-order-details table td {
+    white-space: nowrap;
+  }
+}
+
+/* ---------- Extras: espaciar un poco más el contenido general ---------- */
+.woocommerce-order-received .woocommerce-order {
+  display: grid;
+  gap: 18px;
+}
+/* =========================================================
+       FIN  THANK YOU 
+   ========================================================= */
 
 /** ===================================================== **/
 /**  P A G I N A   I N F O R M A C I Ó N   L E G A L   **
